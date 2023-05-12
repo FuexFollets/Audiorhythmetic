@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/FuexFollets/Audiorhythmetic#readme",
   "devDependencies": {
+    "react": "^18.2.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
   }
 }
