@@ -24,6 +24,7 @@
   "homepage": "https://github.com/FuexFollets/Audiorhythmetic#readme",
   "devDependencies": {
     "react": "^18.2.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "dependencies": {
