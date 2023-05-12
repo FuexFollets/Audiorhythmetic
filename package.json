@@ -1,0 +1,25 @@
+{
+  "name": "audiorhythmetic",
+  "version": "1.0.0",
+  "description": "A waveform audio experimental lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FuexFollets/Audiorhythmetic.git"
+  },
+  "keywords": [
+    "c++",
+    "react",
+    "wav",
+    "audio"
+  ],
+  "author": "Fuexfollets",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FuexFollets/Audiorhythmetic/issues"
+  },
+  "homepage": "https://github.com/FuexFollets/Audiorhythmetic#readme"
+}
