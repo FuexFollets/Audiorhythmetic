@@ -21,4 +21,4 @@ class Globals {
     static allUint8Arrays = new Array<UploadedSoundFileBits>()
 }
 
-export default Globals
+export { Globals, UploadedSoundFileBits }
