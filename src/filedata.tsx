@@ -1,8 +1,8 @@
-function UploadMenuData() {
+function FileData() {
     return (
         <div>
         </div>
     )
 }
 
-export default UploadMenuData
+export default FileData
