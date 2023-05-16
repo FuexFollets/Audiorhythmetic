@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import UploadMenu from './uploadmenu.tsx'
 import './App.css'
 
 function App() {
-  return (
-    <>
-    </>
-  )
+    return (
+            <>
+            <UploadMenu />
+            </>
+           )
 }
 
 export default App
