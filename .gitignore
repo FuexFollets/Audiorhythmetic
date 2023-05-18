@@ -60,5 +60,8 @@ dist-ssr
 *.out
 *.app
 
+# Clangd cache directory
+.cache
+
 
 # Node git
