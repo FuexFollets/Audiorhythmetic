@@ -63,7 +63,7 @@ wasmdist
 *.app
 
 # Clangd cache directory
-.cache
+.cache/*
 
 
 # Node git
