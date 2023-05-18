@@ -1,0 +1,30 @@
+[
+  {
+    "arguments": [
+      "/opt/emscripten-llvm/bin/clang++",
+      "-target",
+      "wasm32-unknown-emscripten",
+      "-fignore-exceptions",
+      "-fvisibility=default",
+      "-mllvm",
+      "-combiner-global-alias-analysis=false",
+      "-mllvm",
+      "-enable-emscripten-sjlj",
+      "-mllvm",
+      "-disable-lsr",
+      "-DEMSCRIPTEN",
+      "--sysroot=/home/fuexfollets/.emscripten_cache/sysroot",
+      "-Xclang",
+      "-iwithsysroot/include/fakesdl",
+      "-Xclang",
+      "-iwithsysroot/include/compat",
+      "-c",
+      "-o",
+      "/tmp/emscripten_temp_2ybybw0m/test1_0.o",
+      "test1.cpp"
+    ],
+    "directory": "/home/fuexfollets/Projects/Audiorhythmetic/src/wasmmodule",
+    "file": "/home/fuexfollets/Projects/Audiorhythmetic/src/wasmmodule/test1.cpp",
+    "output": "/tmp/emscripten_temp_2ybybw0m/test1_0.o"
+  }
+]
