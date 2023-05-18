@@ -26,6 +26,8 @@ dist-ssr
 *.sw?
 
 # All C++ gitignore files
+wasmdist
+*.wasm
 
 # Prerequisites
 *.d
