@@ -1,7 +1,7 @@
-import { wasmModule } from "./wasmmod"
+import { wasmModuleRaw } from "./wasmmod"
 
 function FileData(props: { bytes: Uint8Array | undefined }) {
-    console.log(wasmModule)
+    (async () => console.log((await wasmModuleRaw()).__Z6cpptenv()))()
 
     if (props.bytes === undefined) {
         return (
