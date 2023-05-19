@@ -1,12 +1,12 @@
-import UploadMenu from './uploadmenu.tsx'
-import './App.css'
+import UploadMenu from "./uploadmenu.tsx";
+import "./App.css";
 
 function App() {
-    return (
-            <>
-            <UploadMenu />
-            </>
-           )
+  return (
+    <>
+      <UploadMenu />
+    </>
+  );
 }
 
-export default App
+export default App;
