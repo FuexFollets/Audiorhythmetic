@@ -1,6 +1,18 @@
 // import EventEmitter from "events"
 import Module from "./wasm/module.js";
-import { waitFor } from "./util/waitfor.tsx";
+
+async function waitFor(conditionalFunction: () => boolean) {
+  return new Promise<void>((resolve) => {
+    if (conditionalFunction()) {
+      resolve();
+    } else {
+      setTimeout(async () => {
+        await waitFor(conditionalFunction);
+        resolve();
+      }, 100);
+    }
+  });
+}
 
 const _wasmModuleRaw = Module;
 let _wasmModuleInitialized = false;
