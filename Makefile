@@ -1,4 +1,4 @@
-LIBRARY_INCLUDES :=
+LIBRARY_INCLUDES := -I ./lib/AudioFile/
 
 LXX_FLAGS :=
 
