@@ -2,8 +2,10 @@ import { wasmModuleRaw } from "./wasmmod";
 
 function FileData(props: { bytes: Uint8Array | undefined }) {
   (async () => {
-    console.log((await wasmModuleRaw()).__Z6cpptenv());
-    console.log((await wasmModuleRaw()).__Z9cppaddonei(90));
+      const value = new (await wasmModuleRaw()).data_struct(1, 2, 10)
+
+      console.log(value.a, value.b, value.c)
+      console.log(value.sum())
   })();
 
   if (props.bytes === undefined) {
