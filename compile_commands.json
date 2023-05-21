@@ -29,7 +29,10 @@
       "-o",
       "wasmdist/wasm/testmod.o",
       "src/wasm/testmod.cpp"
-    ]
+    ],
+    "directory": "/home/fuexfollets/Projects/Audiorhythmetic",
+    "file": "/home/fuexfollets/Projects/Audiorhythmetic/src/wasm/testmod.cpp",
+    "output": "/home/fuexfollets/Projects/Audiorhythmetic/wasmdist/wasm/testmod.o"
   },
   {
     "arguments": [
@@ -61,6 +64,9 @@
       "-o",
       "wasmdist/wasm/fileinfo.o",
       "src/wasm/fileinfo.cpp"
-    ]
+    ],
+    "directory": "/home/fuexfollets/Projects/Audiorhythmetic",
+    "file": "/home/fuexfollets/Projects/Audiorhythmetic/src/wasm/fileinfo.cpp",
+    "output": "/home/fuexfollets/Projects/Audiorhythmetic/wasmdist/wasm/fileinfo.o"
   }
 ]
