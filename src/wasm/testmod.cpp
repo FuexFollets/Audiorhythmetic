@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
-#include <audiofile.h>
+#include <AudioFile.h>
 
 #include <emscripten.h>
 #include <emscripten/bind.h>
