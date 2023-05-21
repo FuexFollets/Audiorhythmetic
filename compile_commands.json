@@ -18,13 +18,17 @@
       "-iwithsysroot/include/fakesdl",
       "-Xclang",
       "-iwithsysroot/include/compat",
+      "-std=c++23",
+      "-Wshadow",
+      "-Wall",
+      "-Wextra",
+      "-pedantic-errors",
+      "-pedantic",
+      "-I./lib/AudioFile/",
       "-c",
       "-o",
-      "/tmp/emscripten_temp_2ybybw0m/test1_0.o",
-      "test1.cpp"
-    ],
-    "directory": "/home/fuexfollets/Projects/Audiorhythmetic/src/wasmmodule",
-    "file": "/home/fuexfollets/Projects/Audiorhythmetic/src/wasmmodule/test1.cpp",
-    "output": "/tmp/emscripten_temp_2ybybw0m/test1_0.o"
+      "wasmdist/wasm/testmod.o",
+      "src/wasm/testmod.cpp"
+    ]
   }
 ]
