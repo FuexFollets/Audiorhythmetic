@@ -1,7 +1,7 @@
 import Draggable from "react-draggable";
 
 import "./App.css";
-import UploadMenu from "./uploadmenu.tsx";
+import UploadMenu from "./UploadMenu.tsx";
 
 function App() {
     return (
