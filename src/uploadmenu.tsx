@@ -26,21 +26,21 @@ function UploadMenu() {
     });
 
     if (buttonIsDisplayingUndefined) {
-      setButtonText("Upload");
+      setButtonText("Add");
       setButtonIsDisplayingUndefined(false);
     }
   }
 
   async function addSoundFile() {
     if (fileState === undefined) {
-      setButtonText("Error, no file specified");
+      setButtonText("No file chosen");
       setButtonIsDisplayingUndefined(true);
     }
 
     if (u8array) {
       Globals.allUint8Arrays.push(new UploadedSoundFileBits(u8array));
     } else if (fileState) {
-      setButtonText(`Successfully uploaded "${fileState.name}"`);
+      setButtonText(`Successfully added "${fileState.name}"`);
     }
   }
 
