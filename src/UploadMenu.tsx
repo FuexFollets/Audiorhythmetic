@@ -1,29 +1,22 @@
 import { useState } from "react";
-import { Globals, UploadedSoundFileBits } from "./globals";
-import FileData from "./filedata";
+import Draggable from "react-draggable";
 
-function UploadMenu() {
+import FileListing from "./FileListing.tsx";
+import "./index.css";
+
+function UploadMenu(props: { fileList: FileListing }) {
   const [buttonText, setButtonText] = useState("Upload");
-  const [fileDataState, setFileDataState] = useState<Uint8Array | undefined>(
-    undefined
-  );
   const [fileState, setFileState] = useState<File | undefined>(undefined);
   const [buttonIsDisplayingUndefined, setButtonIsDisplayingUndefined] =
     useState(false);
 
   let soundFile: File;
-  let u8array: Uint8Array | undefined;
 
   async function handleFile(event: React.ChangeEvent<HTMLInputElement>) {
     if (event.target.files) {
       soundFile = event.target.files[0];
       setFileState(soundFile);
     }
-
-    soundFile.arrayBuffer().then((buffer) => {
-      u8array = new Uint8Array(buffer);
-      setFileDataState(u8array);
-    });
 
     if (buttonIsDisplayingUndefined) {
       setButtonText("Add");
@@ -37,20 +30,19 @@ function UploadMenu() {
       setButtonIsDisplayingUndefined(true);
     }
 
-    if (u8array) {
-      Globals.allUint8Arrays.push(new UploadedSoundFileBits(u8array));
-    } else if (fileState) {
+    else if (fileState) {
+        props.fileList.addFile(fileState);
       setButtonText(`Successfully added "${fileState.name}"`);
     }
   }
 
   return (
-    <div>
+    <Draggable>
+    <div className="widget">
       <input type="file" onChange={handleFile} />
-      <br />
       <button onClick={addSoundFile}>{buttonText}</button>
-      <FileData bytes={fileDataState} />
     </div>
+    </Draggable>
   );
 }
 

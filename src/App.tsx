@@ -1,16 +1,9 @@
-import Draggable from "react-draggable";
-
-import "./App.css";
-import UploadMenu from "./UploadMenu.tsx";
+import Workspace from "./Workspace.tsx";
 
 function App() {
     return (
             <>
-            <Draggable>
-            <div className="widget">
-            <UploadMenu />
-            </div>
-            </Draggable>
+            <Workspace></Workspace>
             </>
            );
 }
