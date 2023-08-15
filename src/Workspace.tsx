@@ -1,16 +1,23 @@
+import { useState, useCallback } from "react";
+
 import UploadMenu from "./UploadMenu.tsx";
-import FileListing from "./FileListing.tsx";
+import FileInstance from "./FileInstance.tsx";
 
 function Workspace() {
-    const uploadedSoundFiles: FileListing = new FileListing((file: File) => { 
-        console.log(
-            `Uploaded ${file.name}\n` +
-            `All files: ${uploadedSoundFiles.files}`
-        );
-    });
+    const [soundFileWidgets, setSoundFileWidgets] = useState<File[]>([]);
+    const uploadedSoundFiles = useCallback((file: File) => {
+        setSoundFileWidgets([...soundFileWidgets, file]);
 
+    }, [soundFileWidgets]);
+
+    let elementCounter = 0;
     return (
-        <UploadMenu fileList={uploadedSoundFiles}></UploadMenu>
+        <>
+            <UploadMenu fileList={uploadedSoundFiles}></UploadMenu>
+            {
+                soundFileWidgets.map((file) => <FileInstance file={file} key={elementCounter++}></FileInstance>)
+            }
+        </>
     );
 }
 
