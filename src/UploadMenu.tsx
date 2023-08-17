@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Draggable from "react-draggable";
 
-import FileListing from "./FileListing.tsx";
 import "./index.css";
 
 function UploadMenu(props: { fileList: (files: File) => void }) {
